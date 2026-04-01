@@ -11,9 +11,12 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  if (n <= 0) return "";
-  return word.repeat(n);
-}
+  let result = "";
+  for (let i = 0; i < n; i++) {
+    result += word;
+  }
+  return result;
+} 
 
 /**
  * @param {string} word - The word to repeat.
@@ -28,8 +31,15 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
-  if (n <= 0 || word === "") return "";
-  return Array(n).fill(word).join(" ");
+ if (n <= 0) return "";
+  if (word.length === 0) return "";
+
+  let result = "";
+  for (let i = 1; i < n; i++) {
+    result += word + " ";
+  }
+  result += word;
+  return result;
 }
 
 /**
