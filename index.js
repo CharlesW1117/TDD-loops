@@ -16,7 +16,7 @@ export function echo(word, n) {
     result += word;
   }
   return result;
-} 
+}
 
 /**
  * @param {string} word - The word to repeat.
@@ -31,7 +31,7 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
- if (n <= 0) return "";
+  if (n <= 0) return "";
   if (word.length === 0) return "";
 
   let result = "";
@@ -95,9 +95,8 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  while (n >= 1) {
-    console.log(n);
-    n--;
+  for (let i = n; i > 0; i--) {
+    console.log(i);
   }
 }
 
@@ -138,14 +137,14 @@ export function sumOddsToN(n) {
  */
 export function getGrowthTime(start, target) {
   if (start <= 0) return undefined;
-  let minutes = 0;
+
+  let i = 0;
   while (start < target) {
     start *= 2;
-    minutes += 20;
+    i += 1;
   }
-  return minutes;
+  return i * 20;
 }
-
 /**
  * The amount of money in a savings account grows by a certain rate every year.
  *
